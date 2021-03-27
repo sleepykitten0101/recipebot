@@ -1,10 +1,8 @@
 import asyncio
 import discord
+import os
 
 client = discord.Client()
-
-# 복사해 둔 토큰을 your_token에 넣어줍니당
-token = "ODE5OTI5NzA1OTAxNTg4NTAw.YEtxCw.k4ROxq5QfmC-Fp-L6Mz96kzp3Tw"
 
 # 봇이 구동되었을 때 동작되는 코드
 @client.event
@@ -145,5 +143,5 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     
-
-client.run(token)
+access_token = os.environ["BOT_TOKEN]
+client.run(access_token)
